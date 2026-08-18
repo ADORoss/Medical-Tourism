@@ -1,0 +1,210 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Poppins', Arial, Helvetica, sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+/* .container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: crimson;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: crimson;
+} */
+
+/* https://internsarea.techlogicians.com/Arkan/Medical_Tourism_Project/assets/Images/banner_bg_image.png */
+/* Hero Section */
+
+.banner_container {
+    position: relative;
+    background: linear-gradient(180deg, rgba(10, 40,62, 0.83) 0%, rgba(0,46, 79, 0.88) 100%), url(https://internsarea.techlogicians.com/Arkan/Medical_Tourism_Project/assets/Images/banner_bg_image.png);
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+div{
+    display: block;
+    unicode-bidi: isolate;
+}
+.banner_content_wrapper {
+    width: 1135px;
+    display: flex;
+    justify-content: space-between;
+}
+.left_banner_content {
+    width: 49%;
+    padding-top: 100px;
+    color: #fff;
+}
+.above_line {
+    width: 57px;
+    height: 10px;
+    background-color: #29819c;
+    border-radius: 9px;
+}
+.left_banner_content h1 {
+    font-size: 42px;
+    padding-top: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.left_banner_content h3 {
+    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    margin-top: -10;
+}
+h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.left_banner_content p {
+    color: rgba(255,255, 255, 0.9);
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-size: normal;
+    font-weight: 400;
+    line-height: 37px;
+    margin: 0;
+    padding: 17px 0 50px 0;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+/* End Hero Section */
+
+
+/* Media Query for Desktop */
+/* @media (max-width: 1200px) {
+    .banner_container .banner_content_wrapper{
+        width: 90%;
+    }
+}
+@media (max-width: 1920px) {
+    .banner_container{
+        height: 600px;
+    }
+    
+    .left_banner_content{
+        width: 50%;
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner_container{
+        height: 940px;
+    }
+    .banner_container .banner_content_wrapper{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+}
+@media (max-width: 575px) {
+    .banner_container .banner_content_wrapper{
+        width: 90%;
+    }
+} */
