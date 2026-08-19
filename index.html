@@ -95,6 +95,126 @@
             <a href="#about">more about us</a>
           </button>
         </div>
+
+        <div class="right_banner_content">
+            <div class="patient_info_form">
+                <h1>International Patients</h1>
+                <p>Quick Call back from an Expert</p>
+                 <form id="patientForm">
+              <div class="name_field">
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  pattern="[A-Za-z]+"
+                  placeholder="First Name"
+                  class="focus_style"
+                  required
+                  onblur="resetTextColor(this)"
+                  oninput="validateInput(this)"
+                  autocomplete="unInput"
+                />
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Last Name"
+                  class="focus_style"
+                  required
+                  onblur="resetTextColor(this)"
+                  oninput="validateInput(this)"
+                  autocomplete="nope"
+                />
+              </div>
+
+              <div class="contact_field">
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  placeholder="Phone Number"
+                  class="focus_style"
+                  required
+                  onblur="resetTextColor(this)"
+                  autocomplete="nope"
+                />
+                <input
+                  type="number"
+                  class="focus_style"
+                  id="age"
+                  name="age"
+                  placeholder="Age"
+                  required
+                  onblur="resetTextColor(this)"
+                  autocomplete="nope"
+                />
+
+                <select name="gender" id="gender" class="focus_style" required>
+                  <option value="gender" class="option">Gender</option>
+                  <option value="male" class="option">Male</option>
+                  <option value="female" class="option">Female</option>
+                </select>
+              </div>
+
+              <div class="email_field">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail"
+                  class="focus_style"
+                  required
+                  onblur="resetTextColor(this)"
+                  autocomplete="nope"
+                />
+                <input
+                  type="text"
+                  id="city"
+                  class="focus_style"
+                  name="city"
+                  placeholder="City"
+                  required
+                  onblur="resetTextColor(this)"
+                  oninput="validateInput(this)"
+                  autocomplete="nope"
+                />
+              </div>
+
+              <div class="name_field">
+                <textarea
+                  id="textarea"
+                  name="textarea"
+                  placeholder="Message"
+                  class="focus_style"
+                  onblur="resetTextColor(this)"
+                ></textarea>
+              </div>
+
+              <div class="file_choose_system">
+                <div class="inner_file_choose">
+                  <label for="fileInput" class="file_choose_btn" id="fileLabel">
+                    Choose File
+                  </label>
+                  <input
+                    type="file"
+                    id="fileInput"
+                    name="fileInput"
+                    style="display: none"
+                    onchange="displayFileName()"
+                  />
+                  <p class="file_name" id="form_file_name"></p>
+                </div>
+              </div>
+
+              <div class="submit_button_container">
+                <button type="button" class="submit_btn" onclick="submitForm()">
+                  Submit
+                </button>
+              </div>
+            </form>
+
+            </div>
+        </div>
       </div>
     </div>
     <!-- End of Hero Section -->

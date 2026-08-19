@@ -393,6 +393,100 @@ a:-webkit-any-link {
 .banner_container .about_button:hover a {
     color: #29819c;
 }
+/* right-banner */
+.banner_container .right_banner_content {
+    width: 38%;
+    z-index: 11111;
+    padding-top: 70px;
+}
+.banner_container .right_banner_content .patient_info_form {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 20px;
+}
+.patient_info_form {
+    color: 000;
+    min-height: 460px;
+    padding-bottom: 50px;
+}
+.patient_info_form h1{
+    font-size: 24px;
+    color: #29819c;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 33px;
+    text-transform: uppercase;
+    line-height: normal;
+    margin: 0;
+}
+.patient_info_form p {
+    font-size: 16px;
+    color: #55747d;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+}
+.patient_info_form form {
+    width: 100%;
+    padding-top: 26px;
+    font-family: "Poppins", sans-serif;
+}
+form {
+    display: block;
+    margin-top: 0rem;
+    unicode-bidi: isolate;
+}
+.patient_info_form form .name_field {
+    display: flex;
+    justify-content: center;
+    gap: 12.4px;
+}
+.patient_info_form form .name_field input{
+    width: 40%;
+    height: 38px;
+    padding-left: 11px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.patient_info_form .focus_style {
+    border: 1px solid #b6c3d2;
+    outline: none;
+}
+input {
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    cursor: text;
+    -webkit-rtl-ordering: logical;
+    background-color: field;
+    margin: 0em 0em 0em 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: none;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+.patient_info_form form .contact_field {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 
 /* End Hero Section */
 
@@ -432,8 +526,11 @@ a:-webkit-any-link {
     .banner_container .banner_content_wrapper{
         width: 90%;
     }
-} */
-/* @media (max-width: 1024px) {
+}
+
+
+
+@media (max-width: 1024px) {
     .menu p {
         display: none;
     }
