@@ -1,9 +1,26 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+    unicode-range: U +0900 -097F, U +1CD0 -1CF9, U +200C -200D, U +20A8, U +20B9, U +20F0, U +25CC, U + A830-A839, U + A8E0-A8FF, U +11B00 -11B09;
+}
+
+body{
+    width: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    display: block;
+    /* margin: 0px; */
+}
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
+    overflow-x: hidden;
 }
 html {
 	font-size: 10px;
@@ -13,64 +30,215 @@ html {
 a {
 	text-decoration: none;
 }
-/* .container {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+
+/* Header Section */
+.header{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    z-index: 1000000000000000000000000000;
+    transition: top 0.3s ease-in-out;
+    margin-bottom: 70px;
 }
-img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+.header .inner_header {
+    width: 1135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu .logo {
+    color: #29819c;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+}
+.menu .logo a {
+    text-decoration: none;
+    color: #29819c;
+}
+.menu .navbar {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    display: flex;
+    gap: 22px;
+    border-right: 1px solid rgba(85, 116, 125, 0.35);
+    padding-right: 30px;
+}
+.menu .navbar .active{
+    font-weight: 700;
+    color: #29819c;
+}
+.menu .navbar a {
+    position: relative;
+    text-decoration: none;
+    columns: #2e2c33;
+}
+.navbar a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 1.5px;
+    background-color: #29819c;
+    transition: width 0.3s ease;
+}
+.hamburder {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    right: 5%;
+    cursor: pointer;
+}
+.hamburder .bar {
+    height: 3px;
+    width: 35px;
+    background-color: #29819c;
+    margin: 5px 0;
+}
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10000;
+    transition: left 0.4s ease-in-out, background-color 1s ease-in-out;
+    justify-content: center;
+    z-index: 999999999999999;
+}
+.offcanvas .inner_offcanvas {
+    width: 90%;
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+}
+.inner_offcanvas .cross {
+    color: #29819c;
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: -30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.inner_offcanvas .offcanvas_title {
+    color: #29819c;
+    padding-left: 9%;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Poppings", sans-serif;
+    margin-bottom: 40px;
+}
+.inner_offcanvas .link {
+    display: block;
+    color: #2e2c33;
+    text-transform: capitalize;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+    padding-top: 20px;
+    font-family: "Poppins", sans-serif;
+}
+.inner_offcanvas a {
+    border-bottom: 1px solid rgb(180, 173, 173);
+    padding-left: 10%;
+    padding-bottom: 12px;
+}
+.inner_offcanvas .company_info {
+    margin-top: 60px;
+    display: flex;
+}
+.inner_offcanvas .company_info .company_info_left {
+    padding-top: 25px;
+    color: #2e2c33;
+    opacity: 1;
+    display: grid;
+    gap: 15px;
+    padding-left: 10%;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    width: 55%;
+    padding-right: 20px;
+}
+b {
+    font-weight: bolder;
+}
+.inner_offcanvas .company_info .company_info_right {
+    width: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_offcanvas .company_info .company_info_right .book_schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #29819c;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 200px;
+    height: 65px;
+}
+.inner_offcanvas .company_info .company_info_right .book_schedule p {
+    display: block;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin: 0;
 }
 p {
-	color: black;
-	font-size: 1.4rem;
-	margin-top: 5px;
-	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 0.05rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
-.section-title {
-	font-size: 4rem;
-	font-weight: 300;
-	color: black;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	text-align: center;
+.menu .contact_info {
+    color: #07252f;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 25px;
+    padding-right: 25px;
 }
-.section-title span {
-	color: crimson;
+.menu .book_appointment {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    background-color: #29819c;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+/* End of Header Section */
 
-.cta {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid crimson;
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	margin-top: 30px;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
-}
-.cta:hover {
-	color: white;
-	background-color: crimson;
-}
-.brand h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: white;
-}
-.brand h1 span {
-	color: crimson;
-} */
 
 /* https://internsarea.techlogicians.com/Arkan/Medical_Tourism_Project/assets/Images/banner_bg_image.png */
 /* Hero Section */
@@ -169,13 +337,70 @@ p{
     margin-inline-end: 0px;
     unicode-bidi: isolate;
 }
-
+button{
+    appearance: auto;
+    text-rendering: auto;
+    color: butontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em 0em 0em 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: none;
+}
+.banner_container .about_button{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    color: #29819c;
+    font-family: "Poppins", sans-serif;
+    padding: 13px 27px;
+    border-radius: 4px;
+    background-color: #29819c;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 999;
+    transition: background-color 0.3s;
+}
+.banner_container .about_button:hover {
+    background-color: #fff;
+    color: #29819c;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.banner_container .about_button a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+.banner_container .about_button:hover a {
+    color: #29819c;
+}
 
 /* End Hero Section */
 
 
+
+
 /* Media Query for Desktop */
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     .banner_container .banner_content_wrapper{
         width: 90%;
     }
@@ -208,3 +433,8 @@ p{
         width: 90%;
     }
 } */
+/* @media (max-width: 1024px) {
+    .menu p {
+        display: none;
+    }
+}
